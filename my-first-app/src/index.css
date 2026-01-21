@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fly-slow: fly 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+  }
+}
+
+body {
+  /* Smooth linear gradient */
+  background: linear-gradient(
+    135deg, 
+    #ffb6c1 0%,    /* Blossom Pink starts at the top-left */
+    #b0e2ff 50%,   /* Bubbles Blue peaks in the middle */
+    #b9f2b1 100%   /* Buttercup Green finishes at the bottom-right */
+  );
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+}
